@@ -1,9 +1,4 @@
---- Database for HIV/AIDs clinic
---- Compatible with Microsoft SQL Server 2017 onwards
-
 -----------------------------------------DATABASE SCHEMA --------------------------------------------
------------------------------------------------------------------------------------------------------
-
 -------- Creating the database
 CREATE database ART_ehr;
 ALTER DATABASE ART_ehr
@@ -11,7 +6,6 @@ MODIFY FILE(NAME = ART_ehr, SIZE = 30MB);
 
 ALTER DATABASE ART_ehr
 MODIFY FILE(NAME = ART_ehr, FILEGROWTH = 3000MB)
-
 
 ------- Creating tables 
 
@@ -126,7 +120,6 @@ CREATE table Counselling(
   FOREIGN KEY (Patient_ID) REFERENCES Patient_Records(Patient_ID)
 );
 
----------------------- VIEWS and ANALYSIS ----------------------
 ------------------------------ VIEWS ----------------------------
 -----------------------------------------------------------------
 -- 1. Patient Demographics Overview
@@ -259,7 +252,6 @@ LEFT JOIN Labs l ON p.Patient_ID = l.Patient_ID;
 
 
 ------------------------------ Analytical Queries ---------------
------------------------------------------------------------------
 -- 1.Patient gender distribution
 SELECT Gender, COUNT(*) AS Total
 FROM Patient_Records
@@ -324,9 +316,6 @@ SELECT
     COUNT(*) AS Total_New_Patients
 FROM Patient_Records
 GROUP BY FORMAT(Date_Registered, 'yyyy-MM');
-
-
------------------------- END ------------------------
 --- NOTE: Views and data analysis to be added upon testing
 --- to ease data extraction.
 

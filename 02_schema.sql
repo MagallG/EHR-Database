@@ -1,14 +1,3 @@
------------------------------------------DATABASE SCHEMA --------------------------------------------
--------- Creating the database
-CREATE database ART_ehr;
-ALTER DATABASE ART_ehr
-MODIFY FILE(NAME = ART_ehr, SIZE = 30MB);
-
-ALTER DATABASE ART_ehr
-MODIFY FILE(NAME = ART_ehr, FILEGROWTH = 3000MB)
-
-------- Creating tables 
-
 -- Patients information table
 CREATE table Patient_Records(
   Patient_ID varchar(10) NOT NULL PRIMARY KEY,

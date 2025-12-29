@@ -1,1 +1,1 @@
-Is part of the [main reoisitory]([url](https://github.com/MagallG/ART-EHR)).
+Is part of the [main repository]([url](https://github.com/MagallG/ART-EHR)).
